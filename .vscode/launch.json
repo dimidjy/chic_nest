@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Listen for XDebug",
+      "type": "php",
+      "request": "launch",
+      "port": 9003,
+      "pathMappings": {
+        "/app": "${workspaceFolder}"
+      },
+      "xdebugSettings": {
+        "show_hidden": 1
+      }
+    },
+    {
+      "name": "PhpUnit dummy",
+      "type": "php",
+      "request": "launch",
+      "port": 9001,
+    }
+  ],
+  "compounds": [
+    {
+      "name": "PhpUnit",
+      "configurations": [
+        "Listen for XDebug",
+        "PhpUnit dummy"
+      ]
+    }
+  ]
+}
